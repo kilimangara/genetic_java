@@ -3,19 +3,17 @@ import java.util.ArrayList;
 import java.util.*;
 
 public class Squares {
-	private ArrayList<Square> set;
+	ArrayList<Square> set;
 	public Squares(){
 		set=new ArrayList<>();
 	}
 	public Squares(ArrayList<Square> in, boolean[] map){
+		set=new ArrayList<>();
 		for(int i=0;i<map.length;i++){
 			if(map[i]==true){
 				set.add(in.get(i));
 			}
 		}
-	}
-	public void add(Square in ){
-		set.add(in);
 	}
 	public double ksur=0;
 	public ArrayList<LinkedList<Square>> search(int maxw, int maxl){
@@ -89,9 +87,6 @@ public class Squares {
 	public void sort(){ 
 		
 		Collections.sort(set);
-	}
-	public String toString(){
-		return set.toString();
 	}
 
 }
